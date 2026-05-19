@@ -1,0 +1,2338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ToroCash ($TRCH) — The Bulls Are Coming</title>
+  <meta name="description" content="ToroCash ($TRCH) — A community-driven bull market token built for strength, momentum, and growth. Fair launch. LP Locked. No fake promises. Just bulls building together." />
+  <meta name="keywords" content="ToroCash, TRCH, meme coin, bull market, crypto, Web3, fair launch, community token, DeFi" />
+  <meta property="og:title" content="ToroCash ($TRCH) — The Bulls Are Coming" />
+  <meta property="og:description" content="Not just a meme coin. A community for the bulls. Strong. Fearless. Always moving forward." />
+  <meta property="og:image" content="torocash.png" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="ToroCash ($TRCH) — The Bulls Are Coming" />
+  <meta name="twitter:description" content="The bull market token. Fair launch June 20, 2026." />
+  <meta name="twitter:image" content="torocash.png" />
+  <link rel="icon" type="image/png" href="torocash.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <style>
+    :root {
+      --obsidian: #050505;
+      --graphite: #111111;
+      --graphite-2: #161616;
+      --toro-gold: #D4A33D;
+      --amber-glow: #FFB84D;
+      --bronze: #7A5520;
+      --soft-neutral: #EDE7DB;
+      --bull-green: #18C47E;
+      --text-muted: rgba(237,231,219,0.55);
+      --text-dim: rgba(237,231,219,0.35);
+      --gold-border: rgba(212,163,61,0.18);
+      --gold-glow: rgba(212,163,61,0.08);
+      --gold-glow-strong: rgba(212,163,61,0.18);
+      --radius-card: 20px;
+      --font-head: 'Sora', sans-serif;
+      --font-body: 'Inter', sans-serif;
+      --font-num: 'Space Grotesk', sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--obsidian);
+      color: var(--soft-neutral);
+      font-family: var(--font-body);
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+
+    /* ─── BACKGROUND ─── */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background:
+        linear-gradient(135deg, #050505 0%, #0B0B0B 30%, #16110A 70%, #050505 100%);
+      z-index: -3;
+    }
+
+    .bg-grid {
+      position: fixed;
+      inset: 0;
+      z-index: -2;
+      opacity: 0.035;
+      background-image:
+        linear-gradient(rgba(212,163,61,0.6) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(212,163,61,0.6) 1px, transparent 1px);
+      background-size: 60px 60px;
+      animation: gridDrift 60s linear infinite;
+    }
+
+    @keyframes gridDrift {
+      0% { transform: translate(0,0); }
+      100% { transform: translate(60px, 60px); }
+    }
+
+    /* ─── PARTICLES CANVAS ─── */
+    #particles-canvas {
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    /* ─── NAV ─── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      padding: 18px 5%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(5,5,5,0.82);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--gold-border);
+      transition: all 0.3s ease;
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+
+    .nav-logo img {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      border: 1px solid rgba(212,163,61,0.4);
+    }
+
+    .nav-logo span {
+      font-family: var(--font-head);
+      font-weight: 800;
+      font-size: 1.1rem;
+      background: linear-gradient(90deg, var(--toro-gold), var(--amber-glow));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.875rem;
+      font-weight: 500;
+      letter-spacing: 0.03em;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--toro-gold); }
+
+    .nav-cta {
+      background: linear-gradient(135deg, var(--toro-gold), var(--amber-glow));
+      color: #000 !important;
+      font-weight: 700 !important;
+      padding: 8px 20px;
+      border-radius: 8px;
+      font-size: 0.85rem !important;
+      transition: all 0.2s ease !important;
+      box-shadow: 0 0 20px rgba(212,163,61,0.25);
+    }
+
+    .nav-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 32px rgba(255,184,77,0.4) !important;
+      color: #000 !important;
+    }
+
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 4px;
+    }
+
+    .nav-hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--toro-gold);
+      border-radius: 2px;
+      transition: all 0.3s;
+    }
+
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 72px; left: 0; right: 0;
+      background: rgba(5,5,5,0.97);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--gold-border);
+      padding: 20px 5%;
+      z-index: 99;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .mobile-menu.open { display: flex; }
+
+    .mobile-menu a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 500;
+      padding: 8px 0;
+      border-bottom: 1px solid var(--gold-border);
+      transition: color 0.2s;
+    }
+
+    .mobile-menu a:hover { color: var(--toro-gold); }
+
+    /* ─── HERO ─── */
+    #hero {
+      min-height: 100vh;
+      padding: 140px 5% 80px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-radial {
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 900px;
+      height: 900px;
+      background: radial-gradient(ellipse at center, rgba(212,163,61,0.07) 0%, transparent 65%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .hero-inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+      text-align: center;
+    }
+
+    .hero-banner {
+      width: 100%;
+      border-radius: 20px;
+      border: 1px solid var(--gold-border);
+      box-shadow: 0 0 50px rgba(212,163,61,0.12);
+      margin-bottom: 44px;
+      max-height: 340px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .hero-left { display: flex; flex-direction: column; gap: 24px; align-items: center; }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(24,196,126,0.1);
+      border: 1px solid rgba(24,196,126,0.3);
+      color: var(--bull-green);
+      font-size: 0.78rem;
+      font-weight: 600;
+      font-family: var(--font-num);
+      padding: 6px 14px;
+      border-radius: 100px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      width: fit-content;
+    }
+
+    .hero-badge .dot {
+      width: 7px; height: 7px;
+      background: var(--bull-green);
+      border-radius: 50%;
+      animation: pulse-green 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse-green {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(0.7); }
+    }
+
+    .hero-h1 {
+      font-family: var(--font-head);
+      font-size: clamp(2.4rem, 5vw, 4rem);
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+    }
+
+    .hero-h1 .gold {
+      background: linear-gradient(90deg, var(--toro-gold) 0%, var(--amber-glow) 60%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-sub {
+      font-size: 1rem;
+      color: var(--text-muted);
+      max-width: 480px;
+      line-height: 1.7;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: linear-gradient(135deg, var(--toro-gold), var(--amber-glow));
+      color: #000;
+      font-weight: 700;
+      font-family: var(--font-head);
+      font-size: 0.95rem;
+      padding: 14px 30px;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      box-shadow: 0 0 30px rgba(212,163,61,0.3);
+      text-decoration: none;
+      letter-spacing: 0.01em;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 0 50px rgba(255,184,77,0.5);
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+      color: var(--toro-gold);
+      font-weight: 600;
+      font-family: var(--font-head);
+      font-size: 0.95rem;
+      padding: 13px 28px;
+      border-radius: 10px;
+      border: 1px solid rgba(212,163,61,0.5);
+      cursor: pointer;
+      transition: all 0.25s ease;
+      text-decoration: none;
+      letter-spacing: 0.01em;
+    }
+
+    .btn-secondary:hover {
+      background: rgba(212,163,61,0.08);
+      border-color: var(--toro-gold);
+      transform: translateY(-2px);
+    }
+
+    .hero-sub {
+      max-width: 600px;
+    }
+
+    /* ─── COUNTDOWN ─── */
+    #countdown {
+      padding: 60px 5%;
+      position: relative;
+    }
+
+    .countdown-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      background: rgba(17,17,17,0.72);
+      backdrop-filter: blur(18px);
+      border: 1px solid var(--gold-border);
+      border-radius: var(--radius-card);
+      box-shadow: 0 0 40px var(--gold-glow);
+      padding: 40px;
+      text-align: center;
+    }
+
+    .countdown-label {
+      font-family: var(--font-num);
+      font-size: 0.8rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--toro-gold);
+      margin-bottom: 8px;
+    }
+
+    .countdown-title {
+      font-family: var(--font-head);
+      font-weight: 800;
+      font-size: clamp(1.4rem, 3vw, 2rem);
+      margin-bottom: 6px;
+    }
+
+    .countdown-date {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 32px;
+      font-family: var(--font-num);
+    }
+
+    .timer-grid {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .timer-block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .timer-num {
+      font-family: var(--font-num);
+      font-size: clamp(2.4rem, 6vw, 4rem);
+      font-weight: 700;
+      line-height: 1;
+      background: linear-gradient(180deg, var(--amber-glow), var(--toro-gold));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      min-width: 80px;
+      text-align: center;
+    }
+
+    .timer-unit {
+      font-size: 0.7rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      font-family: var(--font-num);
+    }
+
+    .timer-sep {
+      font-family: var(--font-num);
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 300;
+      color: rgba(212,163,61,0.3);
+      line-height: 1;
+      margin-top: 2px;
+    }
+
+    /* ─── SECTION COMMONS ─── */
+    .section-header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .section-tag {
+      display: inline-block;
+      font-family: var(--font-num);
+      font-size: 0.72rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--toro-gold);
+      margin-bottom: 10px;
+    }
+
+    .section-title {
+      font-family: var(--font-head);
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 800;
+      line-height: 1.15;
+    }
+
+    .section-sub {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-top: 10px;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* ─── NARRATIVE ─── */
+    #narrative {
+      padding: 80px 5%;
+    }
+
+    .narrative-inner {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .narrative-card {
+      background: rgba(17,17,17,0.72);
+      backdrop-filter: blur(18px);
+      border: 1px solid var(--gold-border);
+      border-radius: var(--radius-card);
+      padding: 52px 56px;
+      box-shadow: 0 0 40px var(--gold-glow);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .narrative-card::before {
+      content: '🐂';
+      position: absolute;
+      right: -20px; top: -20px;
+      font-size: 8rem;
+      opacity: 0.04;
+      transform: rotate(-15deg);
+    }
+
+    .narrative-title {
+      font-family: var(--font-head);
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-weight: 800;
+      margin-bottom: 28px;
+    }
+
+    .narrative-title .gold {
+      background: linear-gradient(90deg, var(--toro-gold), var(--amber-glow));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .narrative-body {
+      font-size: 1rem;
+      color: var(--text-muted);
+      line-height: 1.85;
+    }
+
+    .narrative-body p { margin-bottom: 16px; }
+    .narrative-body p:last-child { margin-bottom: 0; }
+
+    .narrative-body strong {
+      color: var(--soft-neutral);
+      font-weight: 600;
+    }
+
+    .narrative-highlight {
+      display: block;
+      border-left: 3px solid var(--toro-gold);
+      padding: 16px 20px;
+      background: rgba(212,163,61,0.05);
+      border-radius: 0 8px 8px 0;
+      margin: 24px 0;
+      font-style: italic;
+      color: var(--soft-neutral);
+    }
+
+    /* ─── ROADMAP ─── */
+    #roadmap {
+      padding: 80px 5%;
+    }
+
+    .roadmap-inner {
+      max-width: 800px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .roadmap-line {
+      position: absolute;
+      left: 24px;
+      top: 0; bottom: 0;
+      width: 2px;
+      background: linear-gradient(180deg, var(--toro-gold), rgba(212,163,61,0.1));
+    }
+
+    .roadmap-phases {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      padding-left: 60px;
+    }
+
+    .phase {
+      background: rgba(17,17,17,0.72);
+      backdrop-filter: blur(18px);
+      border: 1px solid var(--gold-border);
+      border-radius: var(--radius-card);
+      padding: 28px 32px;
+      margin-bottom: 20px;
+      position: relative;
+      transition: all 0.3s;
+    }
+
+    .phase:hover {
+      border-color: rgba(212,163,61,0.3);
+      transform: translateX(6px);
+    }
+
+    .phase-dot {
+      position: absolute;
+      left: -48px;
+      top: 28px;
+      width: 20px; height: 20px;
+      border-radius: 50%;
+      background: var(--toro-gold);
+      border: 3px solid var(--obsidian);
+      box-shadow: 0 0 16px rgba(212,163,61,0.5);
+    }
+
+    .phase-num {
+      font-family: var(--font-num);
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--toro-gold);
+      margin-bottom: 6px;
+    }
+
+    .phase-title {
+      font-family: var(--font-head);
+      font-weight: 800;
+      font-size: 1.1rem;
+      margin-bottom: 16px;
+    }
+
+    .phase-items {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .phase-items li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    .phase-items li::before {
+      content: '▸';
+      color: var(--toro-gold);
+      font-size: 0.85rem;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    /* ─── TOKENOMICS ─── */
+    #tokenomics {
+      padding: 80px 5%;
+    }
+
+    .tokenomics-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .tokenomics-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: start;
+    }
+
+    .toro-chart-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 28px;
+    }
+
+    .donut-container {
+      position: relative;
+      width: 280px;
+      height: 280px;
+    }
+
+    .donut-container svg {
+      transform: rotate(-90deg);
+    }
+
+    .donut-center {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .donut-total {
+      font-family: var(--font-num);
+      font-size: 1.5rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, var(--toro-gold), var(--amber-glow));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1.1;
+    }
+
+    .donut-label {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      font-family: var(--font-num);
+      letter-spacing: 0.05em;
+    }
+
+    .chart-legend {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      width: 100%;
+    }
+
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.85rem;
+      font-family: var(--font-num);
+    }
+
+    .legend-dot {
+      width: 10px; height: 10px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .legend-name { color: var(--soft-neutral); flex: 1; }
+    .legend-pct {
+      font-weight: 700;
+      color: var(--toro-gold);
+    }
+
+    .tokenomics-details {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .token-row {
+      background: rgba(17,17,17,0.72);
+      backdrop-filter: blur(18px);
+      border: 1px solid var(--gold-border);
+      border-radius: 14px;
+      padding: 20px 24px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      transition: all 0.25s;
+    }
+
+    .token-row:hover {
+      border-color: rgba(212,163,61,0.3);
+      transform: translateX(4px);
+    }
+
+    .token-emoji { font-size: 1.3rem; }
+
+    .token-row-content { flex: 1; }
+
+    .token-row-title {
+      font-family: var(--font-head);
+      font-weight: 700;
+      font-size: 0.95rem;
+      margin-bottom: 4px;
+    }
+
+    .token-row-desc {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    .token-pct {
+      font-family: var(--font-num);
+      font-size: 1.6rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, var(--toro-gold), var(--amber-glow));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .features-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 8px;
+    }
+
+    .feature-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: rgba(24,196,126,0.08);
+      border: 1px solid rgba(24,196,126,0.2);
+      color: var(--bull-green);
+      font-size: 0.75rem;
+      font-family: var(--font-num);
+      padding: 5px 12px;
+      border-radius: 100px;
+    }
+
+    /* ─── LIVE STATS ─── */
+    #stats {
+      padding: 60px 5%;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .stat-card {
+      background: rgba(17,17,17,0.72);
+      backdrop-filter: blur(18px);
+      border: 1px solid var(--gold-border);
+      border-radius: var(--radius-card);
+      box-shadow: 0 0 25px var(--gold-glow);
+      padding: 28px 24px;
+      text-align: center;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .stat-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--toro-gold), transparent);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .stat-card:hover::before { opacity: 1; }
+    .stat-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 0 40px rgba(212,163,61,0.15);
+      border-color: rgba(212,163,61,0.35);
+    }
+
+    .stat-icon {
+      font-size: 1.4rem;
+      margin-bottom: 12px;
+      color: var(--toro-gold);
+    }
+
+    .stat-val {
+      font-family: var(--font-num);
+      font-size: 1.8rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, var(--toro-gold), var(--amber-glow));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1.2;
+    }
+
+    .stat-label {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      letter-spacing: 0.05em;
+      margin-top: 6px;
+      text-transform: uppercase;
+      font-family: var(--font-num);
+    }
+
+    .stat-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 0.72rem;
+      color: var(--bull-green);
+      font-family: var(--font-num);
+      margin-top: 8px;
+    }
+
+    /* ─── CA SECTION ─── */
+    #ca {
+      padding: 50px 5%;
+    }
+
+    .ca-inner {
+      max-width: 800px;
+      margin: 0 auto;
+      background: rgba(17,17,17,0.72);
+      backdrop-filter: blur(18px);
+      border: 1px solid var(--gold-border);
+      border-radius: var(--radius-card);
+      padding: 36px 40px;
+      box-shadow: 0 0 30px var(--gold-glow);
+    }
+
+    .ca-title {
+      font-family: var(--font-head);
+      font-weight: 700;
+      font-size: 0.8rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+    }
+
+    .ca-box {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      background: rgba(5,5,5,0.5);
+      border: 1px solid var(--gold-border);
+      border-radius: 12px;
+      padding: 16px 20px;
+    }
+
+    .ca-coming {
+      font-family: var(--font-num);
+      font-size: 1rem;
+      color: var(--toro-gold);
+      font-weight: 600;
+      flex: 1;
+    }
+
+    .btn-copy {
+      background: rgba(212,163,61,0.12);
+      border: 1px solid rgba(212,163,61,0.3);
+      color: var(--toro-gold);
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-size: 0.8rem;
+      cursor: pointer;
+      font-family: var(--font-num);
+      font-weight: 600;
+      transition: all 0.2s;
+      white-space: nowrap;
+    }
+
+    .btn-copy:hover { background: rgba(212,163,61,0.2); }
+
+    /* ─── LIVE CHART ─── */
+    #chart-section {
+      padding: 60px 5%;
+    }
+
+    .chart-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      background: rgba(17,17,17,0.72);
+      backdrop-filter: blur(18px);
+      border: 1px solid var(--gold-border);
+      border-radius: var(--radius-card);
+      padding: 32px;
+      box-shadow: 0 0 30px var(--gold-glow);
+    }
+
+    .chart-placeholder {
+      height: 280px;
+      border-radius: 12px;
+      background: rgba(5,5,5,0.6);
+      border: 1px dashed rgba(212,163,61,0.15);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .chart-placeholder::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        repeating-linear-gradient(
+          0deg,
+          transparent,
+          transparent 55px,
+          rgba(212,163,61,0.04) 55px,
+          rgba(212,163,61,0.04) 56px
+        );
+    }
+
+    .chart-svg {
+      width: 100%;
+      max-width: 500px;
+      opacity: 0.3;
+    }
+
+    .chart-placeholder-text {
+      font-family: var(--font-num);
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--toro-gold);
+      position: relative;
+      z-index: 1;
+    }
+
+    .chart-placeholder-sub {
+      font-size: 0.82rem;
+      color: var(--text-dim);
+      font-family: var(--font-num);
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ─── WHY TORO ─── */
+    #why {
+      padding: 80px 5%;
+    }
+
+    .bento-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .bento-card {
+      background: rgba(17,17,17,0.72);
+      backdrop-filter: blur(18px);
+      border: 1px solid var(--gold-border);
+      border-radius: var(--radius-card);
+      padding: 32px 28px;
+      box-shadow: 0 0 25px var(--gold-glow);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .bento-card::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--toro-gold), transparent);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .bento-card:hover::after { opacity: 1; }
+    .bento-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 50px rgba(212,163,61,0.14);
+      border-color: rgba(212,163,61,0.3);
+    }
+
+    .bento-icon {
+      width: 52px; height: 52px;
+      background: rgba(212,163,61,0.1);
+      border: 1px solid rgba(212,163,61,0.25);
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      margin-bottom: 20px;
+    }
+
+    .bento-title {
+      font-family: var(--font-head);
+      font-weight: 700;
+      font-size: 1.05rem;
+      margin-bottom: 10px;
+    }
+
+    .bento-desc {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    /* ─── CTA BANNER ─── */
+    #join {
+      padding: 80px 5%;
+    }
+
+    .join-inner {
+      max-width: 800px;
+      margin: 0 auto;
+      background: rgba(17,17,17,0.72);
+      backdrop-filter: blur(18px);
+      border: 1px solid var(--gold-border);
+      border-radius: 28px;
+      padding: 64px 48px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 0 60px var(--gold-glow);
+    }
+
+    .join-inner::before {
+      content: '';
+      position: absolute;
+      top: -80px; left: 50%;
+      transform: translateX(-50%);
+      width: 400px; height: 200px;
+      background: radial-gradient(ellipse, rgba(212,163,61,0.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .join-title {
+      font-family: var(--font-head);
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 800;
+      margin-bottom: 14px;
+      position: relative;
+    }
+
+    .join-sub {
+      color: var(--text-muted);
+      font-size: 1rem;
+      margin-bottom: 36px;
+      position: relative;
+    }
+
+    .join-socials {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      position: relative;
+    }
+
+    .social-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      background: rgba(17,17,17,0.8);
+      border: 1px solid var(--gold-border);
+      color: var(--soft-neutral);
+      padding: 12px 24px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-family: var(--font-num);
+      font-weight: 600;
+      transition: all 0.25s ease;
+    }
+
+    .social-btn:hover {
+      border-color: var(--toro-gold);
+      color: var(--toro-gold);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 30px rgba(212,163,61,0.12);
+    }
+
+    .social-btn i { font-size: 1.1rem; }
+    .social-btn .telegram-icon { color: #0088CC; }
+    .social-btn .x-icon { color: var(--soft-neutral); }
+    .social-btn:hover .telegram-icon { color: #0088CC; }
+    .social-btn:hover .x-icon { color: var(--soft-neutral); }
+
+    /* ─── FOOTER ─── */
+    footer {
+      padding: 40px 5% 30px;
+      border-top: 1px solid var(--gold-border);
+      text-align: center;
+    }
+
+    .footer-logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    .footer-logo img {
+      width: 32px; height: 32px;
+      border-radius: 50%;
+      border: 1px solid rgba(212,163,61,0.3);
+    }
+
+    .footer-logo span {
+      font-family: var(--font-head);
+      font-weight: 800;
+      font-size: 1rem;
+      background: linear-gradient(90deg, var(--toro-gold), var(--amber-glow));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+
+    .footer-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.82rem;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover { color: var(--toro-gold); }
+
+    .footer-disclaimer {
+      font-size: 0.75rem;
+      color: var(--text-dim);
+      max-width: 600px;
+      margin: 0 auto 16px;
+      line-height: 1.6;
+    }
+
+    .footer-copy {
+      font-size: 0.78rem;
+      color: var(--text-dim);
+      font-family: var(--font-num);
+    }
+
+    /* ─── MODAL ─── */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.7);
+      backdrop-filter: blur(4px);
+      z-index: 200;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.25s;
+    }
+
+    .modal-overlay.active {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    .modal-box {
+      background: var(--graphite);
+      border: 1px solid var(--gold-border);
+      border-radius: 20px;
+      padding: 48px 40px;
+      text-align: center;
+      max-width: 380px;
+      width: 90%;
+      position: relative;
+      box-shadow: 0 0 80px rgba(212,163,61,0.15);
+      transform: scale(0.92);
+      transition: transform 0.25s;
+    }
+
+    .modal-overlay.active .modal-box { transform: scale(1); }
+
+    .modal-icon {
+      font-size: 2.5rem;
+      margin-bottom: 16px;
+    }
+
+    .modal-title {
+      font-family: var(--font-head);
+      font-weight: 800;
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+
+    .modal-title .gold {
+      background: linear-gradient(90deg, var(--toro-gold), var(--amber-glow));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .modal-sub {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 28px;
+      line-height: 1.6;
+    }
+
+    .modal-close {
+      background: linear-gradient(135deg, var(--toro-gold), var(--amber-glow));
+      color: #000;
+      border: none;
+      padding: 12px 32px;
+      border-radius: 9px;
+      font-weight: 700;
+      font-family: var(--font-head);
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .modal-close:hover { opacity: 0.88; transform: translateY(-2px); }
+
+    /* ─── CHATBOT ─── */
+    .chat-fab {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      z-index: 150;
+      width: 60px; height: 60px;
+      background: linear-gradient(135deg, var(--toro-gold), var(--amber-glow));
+      border-radius: 50%;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 0 30px rgba(212,163,61,0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      transition: all 0.25s;
+      color: #000;
+    }
+
+    .chat-fab:hover { transform: scale(1.08); box-shadow: 0 0 50px rgba(255,184,77,0.5); }
+
+    .chat-fab .chat-badge {
+      position: absolute;
+      top: -4px; right: -4px;
+      width: 18px; height: 18px;
+      background: var(--bull-green);
+      border-radius: 50%;
+      border: 2px solid var(--obsidian);
+      animation: pulse-green 2s infinite;
+    }
+
+    .chatbot-panel {
+      position: fixed;
+      bottom: 100px;
+      right: 28px;
+      z-index: 149;
+      width: 360px;
+      max-height: 560px;
+      background: rgba(14,14,14,0.97);
+      backdrop-filter: blur(24px);
+      border: 1px solid var(--gold-border);
+      border-radius: 20px;
+      box-shadow: 0 20px 80px rgba(0,0,0,0.5), 0 0 40px rgba(212,163,61,0.1);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      transform: translateY(20px) scale(0.95);
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.3s cubic-bezier(0.34,1.56,0.64,1);
+    }
+
+    .chatbot-panel.open {
+      opacity: 1;
+      pointer-events: all;
+      transform: translateY(0) scale(1);
+    }
+
+    .chat-header {
+      background: rgba(17,17,17,0.9);
+      border-bottom: 1px solid var(--gold-border);
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .chat-header-logo {
+      width: 36px; height: 36px;
+      border-radius: 50%;
+      border: 1px solid rgba(212,163,61,0.4);
+      object-fit: cover;
+    }
+
+    .chat-header-info { flex: 1; }
+
+    .chat-header-name {
+      font-family: var(--font-head);
+      font-weight: 700;
+      font-size: 0.9rem;
+      background: linear-gradient(90deg, var(--toro-gold), var(--amber-glow));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .chat-header-status {
+      font-size: 0.7rem;
+      color: var(--bull-green);
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      font-family: var(--font-num);
+    }
+
+    .chat-header-status::before {
+      content: '';
+      width: 6px; height: 6px;
+      background: var(--bull-green);
+      border-radius: 50%;
+    }
+
+    .chat-close-btn {
+      background: none;
+      border: none;
+      color: var(--text-muted);
+      font-size: 1.1rem;
+      cursor: pointer;
+      padding: 4px;
+      transition: color 0.2s;
+    }
+
+    .chat-close-btn:hover { color: var(--toro-gold); }
+
+    .chat-messages {
+      flex: 1;
+      overflow-y: auto;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      scrollbar-width: thin;
+      scrollbar-color: rgba(212,163,61,0.2) transparent;
+    }
+
+    .chat-messages::-webkit-scrollbar { width: 4px; }
+    .chat-messages::-webkit-scrollbar-track { background: transparent; }
+    .chat-messages::-webkit-scrollbar-thumb { background: rgba(212,163,61,0.2); border-radius: 4px; }
+
+    .chat-bubble {
+      max-width: 85%;
+      padding: 10px 14px;
+      border-radius: 14px;
+      font-size: 0.855rem;
+      line-height: 1.55;
+      animation: bubbleIn 0.25s ease;
+    }
+
+    @keyframes bubbleIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .chat-bubble.bot {
+      background: rgba(212,163,61,0.1);
+      border: 1px solid rgba(212,163,61,0.2);
+      color: var(--soft-neutral);
+      align-self: flex-start;
+      border-bottom-left-radius: 4px;
+    }
+
+    .chat-bubble.user {
+      background: linear-gradient(135deg, rgba(212,163,61,0.25), rgba(255,184,77,0.2));
+      border: 1px solid rgba(212,163,61,0.3);
+      color: var(--soft-neutral);
+      align-self: flex-end;
+      border-bottom-right-radius: 4px;
+    }
+
+    .chat-suggestions {
+      padding: 0 16px 10px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+    }
+
+    .suggestion-chip {
+      background: rgba(212,163,61,0.08);
+      border: 1px solid rgba(212,163,61,0.22);
+      color: var(--toro-gold);
+      padding: 6px 12px;
+      border-radius: 100px;
+      font-size: 0.75rem;
+      cursor: pointer;
+      font-family: var(--font-num);
+      transition: all 0.2s;
+      white-space: nowrap;
+    }
+
+    .suggestion-chip:hover {
+      background: rgba(212,163,61,0.18);
+      transform: translateY(-1px);
+    }
+
+    .chat-input-row {
+      border-top: 1px solid var(--gold-border);
+      padding: 12px 14px;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .chat-input {
+      flex: 1;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(212,163,61,0.2);
+      border-radius: 10px;
+      padding: 9px 14px;
+      color: var(--soft-neutral);
+      font-size: 0.85rem;
+      font-family: var(--font-body);
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .chat-input:focus { border-color: rgba(212,163,61,0.5); }
+    .chat-input::placeholder { color: var(--text-dim); }
+
+    .chat-send {
+      width: 36px; height: 36px;
+      background: linear-gradient(135deg, var(--toro-gold), var(--amber-glow));
+      border: none;
+      border-radius: 9px;
+      color: #000;
+      font-size: 0.9rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s;
+      flex-shrink: 0;
+    }
+
+    .chat-send:hover { transform: scale(1.08); }
+
+    .typing-indicator {
+      display: flex;
+      gap: 4px;
+      padding: 10px 14px;
+      background: rgba(212,163,61,0.1);
+      border: 1px solid rgba(212,163,61,0.2);
+      border-radius: 14px;
+      border-bottom-left-radius: 4px;
+      width: fit-content;
+      align-self: flex-start;
+    }
+
+    .typing-indicator span {
+      width: 6px; height: 6px;
+      background: var(--toro-gold);
+      border-radius: 50%;
+      animation: typingDot 1.4s ease-in-out infinite;
+    }
+
+    .typing-indicator span:nth-child(2) { animation-delay: 0.2s; }
+    .typing-indicator span:nth-child(3) { animation-delay: 0.4s; }
+
+    @keyframes typingDot {
+      0%, 60%, 100% { opacity: 0.3; transform: scale(0.8); }
+      30% { opacity: 1; transform: scale(1); }
+    }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 900px) {
+      .hero-left { align-items: center; }
+      .hero-sub { text-align: center; }
+      .bento-grid { grid-template-columns: 1fr 1fr; }
+      .tokenomics-grid { grid-template-columns: 1fr; }
+      .toro-chart-wrap { order: -1; }
+    }
+
+    @media (max-width: 600px) {
+      nav { padding: 14px 5%; }
+      .nav-links { display: none; }
+      .nav-hamburger { display: flex; }
+      .bento-grid { grid-template-columns: 1fr; }
+      .hero-banner { max-height: 180px; }
+      .narrative-card { padding: 32px 24px; }
+      .join-inner { padding: 40px 24px; }
+      .chatbot-panel { width: calc(100vw - 32px); right: 16px; }
+      .ca-inner { padding: 24px 20px; }
+      .timer-grid { gap: 10px; }
+      .timer-num { min-width: 60px; font-size: 2rem; }
+    }
+
+    /* ─── DIVIDER ─── */
+    .gold-divider {
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold-border), transparent);
+      margin: 0 0;
+    }
+
+    /* scroll fade-in */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+<div class="bg-grid"></div>
+<canvas id="particles-canvas"></canvas>
+
+<!-- ─── NAV ─── -->
+<nav id="navbar">
+  <a href="#hero" class="nav-logo">
+    <img src="torocash.png" alt="ToroCash" />
+    <span>ToroCash</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#narrative">About</a></li>
+    <li><a href="#tokenomics">Tokenomics</a></li>
+    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="https://t.me/+yZbGqiyO59c1OGMx" target="_blank" rel="noopener">Community</a></li>
+    <li><a href="#" class="nav-cta" id="nav-buy-btn">Buy $TRCH</a></li>
+  </ul>
+  <div class="nav-hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobile-menu">
+  <a href="#narrative" onclick="closeMobileMenu()">About</a>
+  <a href="#tokenomics" onclick="closeMobileMenu()">Tokenomics</a>
+  <a href="#roadmap" onclick="closeMobileMenu()">Roadmap</a>
+  <a href="https://t.me/+yZbGqiyO59c1OGMx" target="_blank" rel="noopener">Community</a>
+  <a href="#" id="mobile-buy-btn" style="color:var(--toro-gold);font-weight:700;">Buy $TRCH</a>
+</div>
+
+<!-- ─── HERO ─── -->
+<section id="hero">
+  <div class="hero-radial"></div>
+  <div class="hero-inner">
+
+    <!-- Banner -->
+    <img src="banner.png" alt="ToroCash Banner" class="hero-banner" onerror="this.style.display='none'" />
+
+    <!-- Left -->
+    <div class="hero-left">
+      <div class="hero-badge">
+        <span class="dot"></span>
+        Fair Launch · June 20, 2026
+      </div>
+
+      <h1 class="hero-h1">
+        The Bulls<br>Are <span class="gold">Coming. 🐂</span>
+      </h1>
+
+      <p class="hero-sub">
+        ToroCash ($TRCH) — a community-driven bull market token built for strength, patience, and momentum. Not just a meme coin. A movement for those who stay fearless when everyone else runs.
+      </p>
+
+      <div class="hero-buttons">
+        <button class="btn-primary" id="hero-buy-btn">
+          <i class="fa-solid fa-bolt"></i>
+          Buy $TRCH
+        </button>
+        <a href="#tokenomics" class="btn-secondary">
+          <i class="fa-solid fa-chart-pie"></i>
+          View Tokenomics
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── COUNTDOWN ─── -->
+<section id="countdown">
+  <div class="countdown-inner reveal">
+    <p class="countdown-label">⚡ Launch Countdown</p>
+    <h2 class="countdown-title">Fair Launch in</h2>
+    <p class="countdown-date">June 20, 2026 at 10:00 PM UTC</p>
+    <div class="timer-grid">
+      <div class="timer-block">
+        <span class="timer-num" id="cd-days">00</span>
+        <span class="timer-unit">Days</span>
+      </div>
+      <span class="timer-sep">:</span>
+      <div class="timer-block">
+        <span class="timer-num" id="cd-hours">00</span>
+        <span class="timer-unit">Hours</span>
+      </div>
+      <span class="timer-sep">:</span>
+      <div class="timer-block">
+        <span class="timer-num" id="cd-mins">00</span>
+        <span class="timer-unit">Minutes</span>
+      </div>
+      <span class="timer-sep">:</span>
+      <div class="timer-block">
+        <span class="timer-num" id="cd-secs">00</span>
+        <span class="timer-unit">Seconds</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="gold-divider"></div>
+
+<!-- ─── NARRATIVE ─── -->
+<section id="narrative">
+  <div class="narrative-inner">
+    <div class="narrative-card reveal">
+      <h2 class="narrative-title">The Story Behind <span class="gold">ToroCash 🐂</span></h2>
+      <div class="narrative-body">
+        <p>ToroCash started with a simple idea.</p>
+        <p>In crypto, most people panic too fast.</p>
+        <p>One red candle and they disappear. One bad day and they lose confidence. But the market has always rewarded the people who stay calm, keep building, and move forward when everyone else is afraid.</p>
+        <blockquote class="narrative-highlight">
+          That mentality became the foundation of ToroCash. 🐂
+        </blockquote>
+        <p>Not just a meme coin, but a community for the bulls. People who believe in growth, patience, energy, and momentum.</p>
+        <p>The project was created before the launch hype, before the charts, before the noise. Just a small group of bulls building something together from the ground up.</p>
+        <p>ToroCash represents strength during chaos. The idea of staying bullish even when the market gets difficult.</p>
+        <p>That's why the bull became the symbol of the project.</p>
+        <blockquote class="narrative-highlight">
+          <strong>Strong. Fearless. Always moving forward. ⚡</strong>
+        </blockquote>
+        <p>Now the community keeps growing every day, bringing together traders, creators, and people who simply love the energy of crypto.</p>
+        <p><strong>No fake promises.</strong><br>No complicated story.</p>
+        <p>Just bulls building together.</p>
+        <p style="font-size:1.1rem;font-weight:700;color:var(--toro-gold);font-family:var(--font-head);">🐂 The Bulls Are Coming.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="gold-divider"></div>
+
+<!-- ─── ROADMAP ─── -->
+<section id="roadmap">
+  <div class="section-header reveal">
+    <span class="section-tag">🐂 Roadmap</span>
+    <h2 class="section-title">ToroCash Roadmap ⚡</h2>
+    <p class="section-sub">Four phases. One mission. The bulls are coming.</p>
+  </div>
+  <div class="roadmap-inner">
+    <div class="roadmap-line"></div>
+    <div class="roadmap-phases">
+
+      <div class="phase reveal">
+        <div class="phase-dot"></div>
+        <div class="phase-num">Phase 1</div>
+        <div class="phase-title">The Awakening</div>
+        <ul class="phase-items">
+          <li>Project Creation</li>
+          <li>Brand Identity &amp; Bull Narrative</li>
+          <li>Website Launch</li>
+          <li>Telegram &amp; X Setup</li>
+          <li>Community Building Begins</li>
+          <li>Meme Marketing Activation 🔥</li>
+        </ul>
+      </div>
+
+      <div class="phase reveal">
+        <div class="phase-dot"></div>
+        <div class="phase-num">Phase 2</div>
+        <div class="phase-title">Bull Invasion</div>
+        <ul class="phase-items">
+          <li>Fair Launch Deployment</li>
+          <li>Liquidity Lock</li>
+          <li>DexScreener Update</li>
+          <li>Coin Tracking Applications</li>
+          <li>Community Raids Expansion</li>
+          <li>Influencer Partnerships 📣</li>
+        </ul>
+      </div>
+
+      <div class="phase reveal">
+        <div class="phase-dot"></div>
+        <div class="phase-num">Phase 3</div>
+        <div class="phase-title">Global Stampede</div>
+        <ul class="phase-items">
+          <li>Trending Campaigns</li>
+          <li>Major Marketing Push</li>
+          <li>Exchange Listing Goals</li>
+          <li>Viral Meme Operations 🐂</li>
+          <li>International Community Expansion 🌍</li>
+          <li>Strategic Collaborations</li>
+        </ul>
+      </div>
+
+      <div class="phase reveal">
+        <div class="phase-dot"></div>
+        <div class="phase-num">Phase 4</div>
+        <div class="phase-title">ToroCash Ecosystem</div>
+        <ul class="phase-items">
+          <li>Utility Development</li>
+          <li>Community Reward Systems 🎁</li>
+          <li>NFT &amp; Future Ecosystem Plans</li>
+          <li>Advanced Branding Expansion</li>
+          <li>Long-Term Bull Movement ⚡</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="gold-divider"></div>
+
+<!-- ─── TOKENOMICS ─── -->
+<section id="tokenomics">
+  <div class="section-header reveal">
+    <span class="section-tag">⚡ Tokenomics</span>
+    <h2 class="section-title">$TRCH Distribution</h2>
+    <p class="section-sub">Total Supply: 1,000,000,000 $TRCH — fair, transparent, and built to last.</p>
+  </div>
+  <div class="tokenomics-inner">
+    <div class="tokenomics-grid">
+
+      <!-- Donut chart -->
+      <div class="toro-chart-wrap reveal">
+        <div class="donut-container">
+          <svg width="280" height="280" viewBox="0 0 280 280">
+            <!-- 80% LP #D4A33D -->
+            <circle cx="140" cy="140" r="100" fill="none" stroke="#D4A33D" stroke-width="36"
+              stroke-dasharray="502.65 628.31" stroke-dashoffset="0" />
+            <!-- 8% Marketing #FFB84D -->
+            <circle cx="140" cy="140" r="100" fill="none" stroke="#FFB84D" stroke-width="36"
+              stroke-dasharray="50.26 628.31" stroke-dashoffset="-502.65" />
+            <!-- 5% Community #7A5520 -->
+            <circle cx="140" cy="140" r="100" fill="none" stroke="#7A5520" stroke-width="36"
+              stroke-dasharray="31.41 628.31" stroke-dashoffset="-552.91" />
+            <!-- 4% Dev #18C47E -->
+            <circle cx="140" cy="140" r="100" fill="none" stroke="#18C47E" stroke-width="36"
+              stroke-dasharray="25.13 628.31" stroke-dashoffset="-584.32" />
+            <!-- 3% Team #EDE7DB44 -->
+            <circle cx="140" cy="140" r="100" fill="none" stroke="rgba(237,231,219,0.35)" stroke-width="36"
+              stroke-dasharray="18.84 628.31" stroke-dashoffset="-609.45" />
+          </svg>
+          <div class="donut-center">
+            <span class="donut-total">1B</span>
+            <span class="donut-label">$TRCH</span>
+            <span class="donut-label">Total</span>
+          </div>
+        </div>
+        <div class="chart-legend">
+          <div class="legend-item">
+            <span class="legend-dot" style="background:#D4A33D"></span>
+            <span class="legend-name">Liquidity Pool 🔥</span>
+            <span class="legend-pct">80%</span>
+          </div>
+          <div class="legend-item">
+            <span class="legend-dot" style="background:#FFB84D"></span>
+            <span class="legend-name">Marketing 📣</span>
+            <span class="legend-pct">8%</span>
+          </div>
+          <div class="legend-item">
+            <span class="legend-dot" style="background:#7A5520"></span>
+            <span class="legend-name">Community Rewards 🎁</span>
+            <span class="legend-pct">5%</span>
+          </div>
+          <div class="legend-item">
+            <span class="legend-dot" style="background:#18C47E"></span>
+            <span class="legend-name">Development 🛠️</span>
+            <span class="legend-pct">4%</span>
+          </div>
+          <div class="legend-item">
+            <span class="legend-dot" style="background:rgba(237,231,219,0.4)"></span>
+            <span class="legend-name">Team 👑</span>
+            <span class="legend-pct">3%</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Token rows -->
+      <div class="tokenomics-details">
+        <div class="token-row reveal">
+          <span class="token-emoji">🔥</span>
+          <div class="token-row-content">
+            <div class="token-row-title">Liquidity Pool</div>
+            <div class="token-row-desc">Locked liquidity to ensure stability and long-term trust in the ToroCash ecosystem.</div>
+          </div>
+          <span class="token-pct">80%</span>
+        </div>
+        <div class="token-row reveal">
+          <span class="token-emoji">📣</span>
+          <div class="token-row-content">
+            <div class="token-row-title">Marketing</div>
+            <div class="token-row-desc">For raids, influencers, partnerships, listings, and aggressive community expansion.</div>
+          </div>
+          <span class="token-pct">8%</span>
+        </div>
+        <div class="token-row reveal">
+          <span class="token-emoji">🎁</span>
+          <div class="token-row-content">
+            <div class="token-row-title">Community Rewards</div>
+            <div class="token-row-desc">Airdrops, giveaways, contests, and ongoing community incentives for the herd.</div>
+          </div>
+          <span class="token-pct">5%</span>
+        </div>
+        <div class="token-row reveal">
+          <span class="token-emoji">🛠️</span>
+          <div class="token-row-content">
+            <div class="token-row-title">Development</div>
+            <div class="token-row-desc">Ecosystem growth, tools, utilities, and future upgrade capabilities.</div>
+          </div>
+          <span class="token-pct">4%</span>
+        </div>
+        <div class="token-row reveal">
+          <span class="token-emoji">👑</span>
+          <div class="token-row-content">
+            <div class="token-row-title">Team</div>
+            <div class="token-row-desc">Reserved for the core team with transparent long-term commitment to the project.</div>
+          </div>
+          <span class="token-pct">3%</span>
+        </div>
+
+        <div class="features-row reveal" style="margin-top:8px;">
+          <span class="feature-tag"><i class="fa-solid fa-check"></i> Fair Launch</span>
+          <span class="feature-tag"><i class="fa-solid fa-check"></i> No Hidden Wallets</span>
+          <span class="feature-tag"><i class="fa-solid fa-check"></i> LP Locked</span>
+          <span class="feature-tag"><i class="fa-solid fa-check"></i> Community Driven</span>
+          <span class="feature-tag"><i class="fa-solid fa-check"></i> Built For Viral Growth</span>
+          <span class="feature-tag"><i class="fa-solid fa-check"></i> Strong Bull Narrative 🐂</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="gold-divider"></div>
+
+<!-- ─── LIVE TOKEN METRICS ─── -->
+<section id="stats">
+  <div class="section-header reveal">
+    <span class="section-tag">⚡ Token Stats</span>
+    <h2 class="section-title">Live Token Metrics</h2>
+    <p class="section-sub">Real-time numbers powering the ToroCash bull run.</p>
+  </div>
+  <div class="stats-grid">
+    <div class="stat-card reveal">
+      <div class="stat-icon"><i class="fa-solid fa-coins"></i></div>
+      <div class="stat-val">1,000,000,000</div>
+      <div class="stat-label">Total Supply</div>
+    </div>
+    <div class="stat-card reveal">
+      <div class="stat-icon"><i class="fa-solid fa-fire"></i></div>
+      <div class="stat-val">80%</div>
+      <div class="stat-label">Liquidity Pool 🔥</div>
+    </div>
+    <div class="stat-card reveal">
+      <div class="stat-icon"><i class="fa-solid fa-lock"></i></div>
+      <div class="stat-val">Locked</div>
+      <div class="stat-label">LP Status</div>
+      <div class="stat-badge"><i class="fa-solid fa-check"></i> Secured</div>
+    </div>
+    <div class="stat-card reveal">
+      <div class="stat-icon"><i class="fa-solid fa-rocket"></i></div>
+      <div class="stat-val">Coming Soon</div>
+      <div class="stat-label">Token Price</div>
+    </div>
+    <div class="stat-card reveal">
+      <div class="stat-icon"><i class="fa-solid fa-chart-line"></i></div>
+      <div class="stat-val">Coming Soon</div>
+      <div class="stat-label">Market Cap</div>
+    </div>
+    <div class="stat-card reveal">
+      <div class="stat-icon"><i class="fa-solid fa-users"></i></div>
+      <div class="stat-val">Growing 🐂</div>
+      <div class="stat-label">Community</div>
+      <div class="stat-badge"><i class="fa-solid fa-arrow-trend-up"></i> Expanding daily</div>
+    </div>
+  </div>
+</section>
+
+<div class="gold-divider"></div>
+
+<!-- ─── CONTRACT ADDRESS ─── -->
+<section id="ca">
+  <div class="ca-inner reveal">
+    <p class="ca-title">Contract Address ($TRCH)</p>
+    <div class="ca-box">
+      <span class="ca-coming">⏳ Coming Soon — Fair Launch June 20, 2026</span>
+      <button class="btn-copy" onclick="copyCa(this)">Copy CA</button>
+    </div>
+  </div>
+</section>
+
+<div class="gold-divider"></div>
+
+<!-- ─── LIVE CHART ─── -->
+<section id="chart-section">
+  <div class="section-header reveal">
+    <span class="section-tag">📈 Price Chart</span>
+    <h2 class="section-title">Live Chart</h2>
+    <p class="section-sub">Track $TRCH price action in real time. Chart goes live at launch.</p>
+  </div>
+  <div class="chart-container reveal">
+    <div class="chart-placeholder">
+      <svg class="chart-svg" viewBox="0 0 500 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="chartGrad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#D4A33D" stop-opacity="0.5"/>
+            <stop offset="100%" stop-color="#D4A33D" stop-opacity="0"/>
+          </linearGradient>
+        </defs>
+        <path d="M0 130 L50 120 L100 110 L130 115 L160 90 L200 80 L230 95 L260 60 L300 55 L330 40 L370 30 L410 20 L460 15 L500 10" stroke="#D4A33D" stroke-width="2" fill="none" stroke-linecap="round"/>
+        <path d="M0 130 L50 120 L100 110 L130 115 L160 90 L200 80 L230 95 L260 60 L300 55 L330 40 L370 30 L410 20 L460 15 L500 10 L500 150 L0 150 Z" fill="url(#chartGrad)"/>
+      </svg>
+      <div class="chart-placeholder-text">📈 Coming Soon</div>
+      <div class="chart-placeholder-sub">Live chart will be available on launch day — June 20, 2026 at 10:00 PM UTC</div>
+    </div>
+  </div>
+</section>
+
+<div class="gold-divider"></div>
+
+<!-- ─── WHY TOROCASH ─── -->
+<section id="why">
+  <div class="section-header reveal">
+    <span class="section-tag">🐂 Why ToroCash</span>
+    <h2 class="section-title">Built Different</h2>
+    <p class="section-sub">Three pillars that make ToroCash the bull market token.</p>
+  </div>
+  <div class="bento-grid">
+    <div class="bento-card reveal">
+      <div class="bento-icon">💧</div>
+      <div class="bento-title">Deep Liquidity</div>
+      <div class="bento-desc">80% of the total supply goes directly to the liquidity pool, locked permanently. This isn't a rug. It's a foundation built for long-term stability and trust from day one.</div>
+    </div>
+    <div class="bento-card reveal">
+      <div class="bento-icon">🐂</div>
+      <div class="bento-title">Community Driven</div>
+      <div class="bento-desc">ToroCash was built by the community, for the community. From the memes to the marketing, every move is made together. The herd is the engine — and the herd is growing every day.</div>
+    </div>
+    <div class="bento-card reveal">
+      <div class="bento-icon">⚡</div>
+      <div class="bento-title">Bull Market Mechanics</div>
+      <div class="bento-desc">Designed to thrive in momentum. With a fair launch, no hidden wallets, and a viral-first narrative, ToroCash is engineered for organic bull runs — not manufactured pumps.</div>
+    </div>
+  </div>
+</section>
+
+<div class="gold-divider"></div>
+
+<!-- ─── JOIN THE HERD ─── -->
+<section id="join">
+  <div class="join-inner reveal">
+    <h2 class="join-title">Join The Herd 🐂</h2>
+    <p class="join-sub">The bulls are gathering. Get in before the stampede. Follow us on all channels and be part of the movement from day one.</p>
+    <div class="join-socials">
+      <a href="https://t.me/+yZbGqiyO59c1OGMx" target="_blank" rel="noopener" class="social-btn">
+        <i class="fa-brands fa-telegram telegram-icon" style="color:#0088CC"></i>
+        Join Telegram
+      </a>
+      <a href="https://x.com/ToroCashCoin" target="_blank" rel="noopener" class="social-btn">
+        <i class="fa-brands fa-x-twitter x-icon"></i>
+        Follow on X
+      </a>
+      <button class="btn-primary" id="join-buy-btn" style="margin-top:0;">
+        <i class="fa-solid fa-bolt"></i>
+        Buy $TRCH Now
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ─── FOOTER ─── -->
+<footer>
+  <div class="footer-logo">
+    <img src="torocash.png" alt="ToroCash" />
+    <span>ToroCash</span>
+  </div>
+  <div class="footer-links">
+    <a href="#narrative">About</a>
+    <a href="#tokenomics">Tokenomics</a>
+    <a href="#roadmap">Roadmap</a>
+    <a href="https://t.me/+yZbGqiyO59c1OGMx" target="_blank" rel="noopener">Telegram</a>
+    <a href="https://x.com/ToroCashCoin" target="_blank" rel="noopener">X (Twitter)</a>
+  </div>
+  <p class="footer-disclaimer">
+    ToroCash ($TRCH) is a community-driven meme token. This is not financial advice. Cryptocurrency investments carry high risk. Always do your own research (DYOR) before investing. The team is not responsible for any losses incurred.
+  </p>
+  <p class="footer-copy">© 2026 ToroCash. All rights reserved. 🐂 The Bulls Are Coming.</p>
+</footer>
+
+<!-- ─── MODAL ─── -->
+<div class="modal-overlay" id="coming-modal">
+  <div class="modal-box">
+    <div class="modal-icon">⏳</div>
+    <h3 class="modal-title"><span class="gold">Coming</span> Soon</h3>
+    <p class="modal-sub">
+      $TRCH is launching on <strong>June 20, 2026 at 10:00 PM UTC</strong>.<br><br>
+      Join our Telegram &amp; X to get notified the moment we go live. The herd is ready. 🐂
+    </p>
+    <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;">
+      <a href="https://t.me/+yZbGqiyO59c1OGMx" target="_blank" rel="noopener" class="btn-secondary" style="padding:10px 20px;font-size:0.85rem;">
+        <i class="fa-brands fa-telegram"></i> Telegram
+      </a>
+      <button class="modal-close" id="modal-close-btn">Got it 🐂</button>
+    </div>
+  </div>
+</div>
+
+<!-- ─── CHATBOT ─── -->
+<button class="chat-fab" id="chat-fab" aria-label="Open ToroCash Chatbot">
+  🐂
+  <span class="chat-badge"></span>
+</button>
+
+<div class="chatbot-panel" id="chatbot-panel">
+  <div class="chat-header">
+    <img src="torocash.png" alt="ToroCash Bot" class="chat-header-logo" onerror="this.style.background='var(--toro-gold)'" />
+    <div class="chat-header-info">
+      <div class="chat-header-name">TOROCASH CHATBOT</div>
+      <div class="chat-header-status">Online — Ask me anything</div>
+    </div>
+    <button class="chat-close-btn" id="chat-close"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <div class="chat-messages" id="chat-messages">
+    <div class="chat-bubble bot">
+      🐂 Hey, I'm the <strong>ToroCash Chatbot</strong>! Ask me anything about $TRCH — tokenomics, launch date, how to buy, roadmap — I've got you covered. The bulls are coming! ⚡
+    </div>
+  </div>
+  <div class="chat-suggestions" id="chat-suggestions">
+    <span class="suggestion-chip" onclick="sendSuggestion(this)">Launch date?</span>
+    <span class="suggestion-chip" onclick="sendSuggestion(this)">What is $TRCH?</span>
+    <span class="suggestion-chip" onclick="sendSuggestion(this)">Tokenomics</span>
+    <span class="suggestion-chip" onclick="sendSuggestion(this)">How to buy?</span>
+    <span class="suggestion-chip" onclick="sendSuggestion(this)">Is LP locked?</span>
+    <span class="suggestion-chip" onclick="sendSuggestion(this)">Roadmap</span>
+    <span class="suggestion-chip" onclick="sendSuggestion(this)">Socials</span>
+    <span class="suggestion-chip" onclick="sendSuggestion(this)">Total supply?</span>
+  </div>
+  <div class="chat-input-row">
+    <input type="text" class="chat-input" id="chat-input" placeholder="Ask about ToroCash..." maxlength="200" />
+    <button class="chat-send" id="chat-send"><i class="fa-solid fa-paper-plane"></i></button>
+  </div>
+</div>
+
+<script>
+// ─── PARTICLES ───
+(function() {
+  const canvas = document.getElementById('particles-canvas');
+  const ctx = canvas.getContext('2d');
+  let W, H, particles = [];
+
+  function resize() {
+    W = canvas.width = window.innerWidth;
+    H = canvas.height = window.innerHeight;
+  }
+
+  resize();
+  window.addEventListener('resize', resize);
+
+  const COUNT = 55;
+  for (let i = 0; i < COUNT; i++) {
+    particles.push({
+      x: Math.random() * window.innerWidth,
+      y: Math.random() * window.innerHeight,
+      r: Math.random() * 1.5 + 0.3,
+      vx: (Math.random() - 0.5) * 0.25,
+      vy: (Math.random() - 0.5) * 0.25,
+      alpha: Math.random() * 0.4 + 0.08
+    });
+  }
+
+  function draw() {
+    ctx.clearRect(0, 0, W, H);
+    for (const p of particles) {
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(212,163,61,${p.alpha})`;
+      ctx.fill();
+      p.x += p.vx;
+      p.y += p.vy;
+      if (p.x < 0) p.x = W;
+      if (p.x > W) p.x = 0;
+      if (p.y < 0) p.y = H;
+      if (p.y > H) p.y = 0;
+    }
+    requestAnimationFrame(draw);
+  }
+  draw();
+})();
+
+// ─── COUNTDOWN ───
+function updateCountdown() {
+  const launch = new Date('2026-06-20T22:00:00Z').getTime();
+  const now = new Date().getTime();
+  const diff = launch - now;
+
+  if (diff <= 0) {
+    document.getElementById('cd-days').textContent = '00';
+    document.getElementById('cd-hours').textContent = '00';
+    document.getElementById('cd-mins').textContent = '00';
+    document.getElementById('cd-secs').textContent = '00';
+    return;
+  }
+
+  const d = Math.floor(diff / (1000*60*60*24));
+  const h = Math.floor((diff % (1000*60*60*24)) / (1000*60*60));
+  const m = Math.floor((diff % (1000*60*60)) / (1000*60));
+  const s = Math.floor((diff % (1000*60)) / 1000);
+
+  document.getElementById('cd-days').textContent = String(d).padStart(2,'0');
+  document.getElementById('cd-hours').textContent = String(h).padStart(2,'0');
+  document.getElementById('cd-mins').textContent = String(m).padStart(2,'0');
+  document.getElementById('cd-secs').textContent = String(s).padStart(2,'0');
+}
+updateCountdown();
+setInterval(updateCountdown, 1000);
+
+// ─── COMING SOON MODAL ───
+function openModal() {
+  document.getElementById('coming-modal').classList.add('active');
+}
+function closeModal() {
+  document.getElementById('coming-modal').classList.remove('active');
+}
+
+document.getElementById('modal-close-btn').addEventListener('click', closeModal);
+document.getElementById('coming-modal').addEventListener('click', function(e) {
+  if (e.target === this) closeModal();
+});
+document.getElementById('hero-buy-btn').addEventListener('click', openModal);
+document.getElementById('nav-buy-btn').addEventListener('click', function(e) { e.preventDefault(); openModal(); });
+document.getElementById('join-buy-btn').addEventListener('click', openModal);
+const mobileBuyBtn = document.getElementById('mobile-buy-btn');
+if (mobileBuyBtn) mobileBuyBtn.addEventListener('click', function(e) { e.preventDefault(); openModal(); });
+
+// ─── COPY CA ───
+function copyCa(btn) {
+  btn.textContent = 'Coming Soon';
+  setTimeout(() => { btn.textContent = 'Copy CA'; }, 2000);
+}
+
+// ─── NAV HAMBURGER ───
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobile-menu');
+
+hamburger.addEventListener('click', () => {
+  mobileMenu.classList.toggle('open');
+});
+
+function closeMobileMenu() {
+  mobileMenu.classList.remove('open');
+}
+
+// ─── SCROLL REVEAL ───
+const revealEls = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1 });
+revealEls.forEach(el => observer.observe(el));
+
+// ─── CHATBOT ───
+const chatFab = document.getElementById('chat-fab');
+const chatPanel = document.getElementById('chatbot-panel');
+const chatClose = document.getElementById('chat-close');
+const chatInput = document.getElementById('chat-input');
+const chatSend = document.getElementById('chat-send');
+const chatMessages = document.getElementById('chat-messages');
+
+chatFab.addEventListener('click', () => chatPanel.classList.toggle('open'));
+chatClose.addEventListener('click', () => chatPanel.classList.remove('open'));
+
+const KB = {
+  launch: "🚀 ToroCash ($TRCH) launches on **June 20, 2026 at 10:00 PM UTC**. Mark your calendar — the stampede begins then! 🐂⚡",
+  what: "🐂 ToroCash ($TRCH) is a community-driven bull market token. It's not just a meme coin — it's a movement for people who stay bullish when the market gets tough. Strong. Fearless. Always moving forward.",
+  tokenomics: "⚡ **$TRCH Tokenomics (Total: 1,000,000,000 $TRCH):**\n• 🔥 80% — Liquidity Pool (Locked)\n• 📣 8% — Marketing\n• 🎁 5% — Community Rewards\n• 🛠️ 4% — Development\n• 👑 3% — Team",
+  buy: "⏳ The buy link for $TRCH is **Coming Soon** — launching on June 20, 2026! Once live, you'll be able to buy via the link on this website. Join Telegram so you don't miss it! 📣",
+  lp: "🔒 Yes! **LP (Liquidity) is locked**. 80% of supply goes into the liquidity pool which is permanently locked to ensure stability and long-term trust. No rug pulls. No hidden wallets.",
+  roadmap: "🗺️ **ToroCash Roadmap:**\n\n**Phase 1 – The Awakening:** Brand identity, website, Telegram & X setup, community building, meme marketing.\n\n**Phase 2 – Bull Invasion:** Fair launch, LP lock, DexScreener, coin trackers, influencer partnerships.\n\n**Phase 3 – Global Stampede:** Trending campaigns, exchange listing goals, viral meme ops, international expansion.\n\n**Phase 4 – ToroCash Ecosystem:** Utility development, community rewards, NFT & ecosystem plans.",
+  socials: "📱 Find us on:\n• **Telegram:** https://t.me/+yZbGqiyO59c1OGMx\n• **X (Twitter):** https://x.com/ToroCashCoin\n\nJoin the herd! 🐂",
+  supply: "💰 Total supply is **1,000,000,000 $TRCH** (1 Billion tokens). 80% goes directly to the locked liquidity pool.",
+  ca: "📋 The contract address (CA) is **Coming Soon** and will be revealed on launch day — June 20, 2026. Stay in our Telegram to get it the moment it drops!",
+  team: "👑 The ToroCash team is a small group of dedicated bulls who built this project from the ground up before any hype or charts existed. 3% of the supply is reserved for them with transparent long-term commitment.",
+  default: "🐂 Great question! I'm the ToroCash Chatbot and I can answer questions about the $TRCH token, tokenomics, launch date, roadmap, how to buy, and more. Try asking something like 'When is the launch?' or 'What is ToroCash?'"
+};
+
+function getReply(msg) {
+  const m = msg.toLowerCase();
+  if (m.includes('launch') || m.includes('when') || m.includes('date') || m.includes('june')) return KB.launch;
+  if (m.includes('what is') || m.includes('about') || m.includes('trch') || m.includes('torocash') && !m.includes('tokenomics')) return KB.what;
+  if (m.includes('tokenomics') || m.includes('distribution') || m.includes('allocation') || m.includes('percent')) return KB.tokenomics;
+  if (m.includes('buy') || m.includes('purchase') || m.includes('get')) return KB.buy;
+  if (m.includes('lp') || m.includes('liquidity') || m.includes('locked') || m.includes('rug')) return KB.lp;
+  if (m.includes('roadmap') || m.includes('plan') || m.includes('phase') || m.includes('future')) return KB.roadmap;
+  if (m.includes('social') || m.includes('telegram') || m.includes('twitter') || m.includes('x.com') || m.includes('community')) return KB.socials;
+  if (m.includes('supply') || m.includes('total') || m.includes('billion') || m.includes('1b')) return KB.supply;
+  if (m.includes('ca') || m.includes('contract') || m.includes('address')) return KB.ca;
+  if (m.includes('team') || m.includes('founders') || m.includes('who')) return KB.team;
+  return KB.default;
+}
+
+function addMessage(text, role) {
+  const div = document.createElement('div');
+  div.className = `chat-bubble ${role}`;
+  div.innerHTML = text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>').replace(/\n/g, '<br>');
+  chatMessages.appendChild(div);
+  chatMessages.scrollTop = chatMessages.scrollHeight;
+  return div;
+}
+
+function showTyping() {
+  const t = document.createElement('div');
+  t.className = 'typing-indicator';
+  t.id = 'typing';
+  t.innerHTML = '<span></span><span></span><span></span>';
+  chatMessages.appendChild(t);
+  chatMessages.scrollTop = chatMessages.scrollHeight;
+}
+
+function removeTyping() {
+  const t = document.getElementById('typing');
+  if (t) t.remove();
+}
+
+function sendSuggestion(chip) {
+  const text = chip.textContent;
+  sendMessage(text);
+}
+
+function sendMessage(text) {
+  const msg = text || chatInput.value.trim();
+  if (!msg) return;
+  chatInput.value = '';
+  document.getElementById('chat-suggestions').style.display = 'none';
+
+  addMessage(msg, 'user');
+  showTyping();
+
+  setTimeout(() => {
+    removeTyping();
+    const reply = getReply(msg);
+    addMessage(reply, 'bot');
+  }, 700 + Math.random() * 500);
+}
+
+chatSend.addEventListener('click', () => sendMessage());
+chatInput.addEventListener('keydown', e => {
+  if (e.key === 'Enter') sendMessage();
+});
+</script>
+</body>
+</html>
